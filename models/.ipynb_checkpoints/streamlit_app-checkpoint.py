@@ -23,10 +23,10 @@ if st.button("Get Prediction"):
 
 # Load and Display Historical Data
 try:
-    df = pd.read_csv("daily_backup.csv")
+    df = pd.read_csv(r"S:\project\investment-portfolio-optimization\daily_backup.csv")  # Absolute path fix
 
     # Ensure proper formatting
-    df["Date"] = pd.to_datetime(df["Date"])  # Convert date format
+    df["Date"] = pd.to_datetime(df["Date"], format="%d-%m-%Y", errors='coerce')    # Convert date format
     df = df.sort_values("Date", ascending=False)  # Sort by recent date
 
     st.subheader("📊 Historical Stock Prices")
@@ -38,4 +38,4 @@ except Exception as e:
     st.error(f"⚠️ Error loading historical data: {e}")
 
 # Footer
-st.write("🔍 **FastAPI + Streamlit Integration by Swayam** | 🚀 Powered by AI")
+st.write("🔍 **FastAPI + Streamlit Integration by Swayam Deshmukh** | 🚀 Powered by Alphatech pvt ltd.")
