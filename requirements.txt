@@ -6,4 +6,8 @@ yfinance
 matplotlib
 seaborn
 streamlit
-river  # Online learning framework"streamlit" 
+river  # Online learning framework
+
+uvicorn
+fastapi
+tensorflow
