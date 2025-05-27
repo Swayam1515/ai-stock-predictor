@@ -6,4 +6,4 @@ yfinance
 matplotlib
 seaborn
 streamlit
-river  # Online learning framework
+river  # Online learning framework"streamlit" 
